@@ -1,0 +1,17 @@
+from faker import Faker
+
+
+def generate_user_info_data():
+    fake = Faker()
+    user_info = {}
+    user_info['username'] = fake.user_name()
+    user_info['gender'] = 'M' if num % 2 == 0 else 'F'
+    user_info['first_name'] = fake.first_name_male() if gender is 'M' else fake.first_name_female()
+    user_info['last_name'] = fake.last_name_male() if gender is 'M' else fake.last_name_female()
+    user_info['email'] = fake.email()
+    user_info['company'] = fake.company()
+    user_info['bio'] = fake.bio()
+    user_info['address'] = fake.address()
+    user_info['country'] = fake.country()
+    user_info['phone_number'] = fake.phone_number()
+    return user_info
